@@ -15,5 +15,10 @@ RUN curl -sL https://releases.hashicorp.com/vault/1.3.0/vault_1.3.0_linux_amd64.
   && chmod a+x vault \
   && mv vault /usr/local/bin/vault
 
+RUN apk -Uuv add groff less python py-pip
+RUN pip install awscli
+RUN apk --purge -v del py-pip
+RUN rm /var/cache/apk/*
+
 WORKDIR /go/src/app 
 
