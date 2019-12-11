@@ -7,6 +7,8 @@ RUN mkdir /go/src/app
 RUN apk add --update make git nodejs npm curl jq
 
 RUN npm install -g serverless
+RUN npm install --global yarn
+
 RUN go get -u github.com/golang/dep/cmd/dep
 
 # Install vault cli
