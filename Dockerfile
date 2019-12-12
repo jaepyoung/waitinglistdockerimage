@@ -1,4 +1,4 @@
-FROM golang:alpine 
+FROM golang:alpine
 
 LABEL version="1.0"
 LABEL maintainer="jaepyoung.kim@gmail.com"
@@ -21,6 +21,7 @@ RUN apk -Uuv add groff less python py-pip
 RUN pip install awscli
 RUN apk --purge -v del py-pip
 RUN rm /var/cache/apk/*
+RUN pip3 install --upgrade setuptools
 
 WORKDIR /go/src/app 
 
