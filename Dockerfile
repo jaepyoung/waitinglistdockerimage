@@ -4,7 +4,7 @@ LABEL version="1.0"
 LABEL maintainer="jaepyoung.kim@gmail.com"
 
 RUN mkdir /go/src/app
-RUN apk add --update make git nodejs npm curl jq
+RUN apk add --update make git nodejs npm curl jq python3
 
 RUN npm install -g serverless
 RUN npm install --global yarn
