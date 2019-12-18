@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install  -y --no-install-recommends \
 
 RUN npm install -g serverless
 RUN npm install --global yarn
+RUN npm install --global gatsby-cli
 
 RUN go get -u github.com/golang/dep/cmd/dep
 
